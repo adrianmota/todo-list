@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,38 +7,48 @@
     <title>Todo List</title>
     <link href="css/style.css" rel="stylesheet" />
 </head>
-
 <body>
     <header>
-        <h1>Todo List</h1>
+        <nav>
+            <h1>Todo List</h1>
+            <div id="search-form">
+                <form>
+                    <input type="search" placeholder="Pattern" class="ma-5 box-height"/>
+	   <button id="search" type="submit" class="ma-5 btn-primary">Search</button>
+                </form>
+            </div>
+        </nav>
     </header>
     <!--Part to add a task-->
     <section>
-        <form id="add-task-form">
-            <label for="title">Title</label>
-            <input id="title" type="text" />
-            <label for="description">Description</label>
-            <input id="description" type="text" />
-            <button id="btn-add" type="button">Add</button>
-        </form>
+        <div id="todo-add-form-div">
+            <form id="todo-add-form">
+                <label for="title" class="ma-5">Title</label>
+                <input id="title" type="text" placeholder="Learn Math" class="ma-5 box-height" />
+                <label for="description" class="ma-5">Description</label>
+                <input id="description" type="text" placeholder="Watch videos about Math" class="ma-5 box-height box-width"/>
+                <button id="btn-add" type="button" class="ma-5 btn-primary">Add</button>
+            </form>
+        </div>
         <hr />
         <!--Table with the content-->
-        <div id="div-tasks-table">
-            <div id="background-table">
-                <table id="tasks-table">
+        <div id="table-div">
+            <div id="table-background">
+                <table id="table">
                     <thead>
                         <tr>
-                            <th>Title</th>
-                            <th colspan="2">Description</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Description</th>
+	            <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>Study physics</td>
                             <td>The topic to study is about the motion</td>
-                            <td>
-                                <button id="btn-edit" type="button">Edit</button>
-                                <button id="btn-delete" type="button">Delete</button>
+                            <td class="text-right">
+                                <button id="btn-edit" type="button" class="btn-secondary">Edit</button>
+                                <button id="btn-delete" type="button" class="btn-danger">Delete</button>
                             </td>
                         </tr>
                     </tbody>
@@ -48,5 +57,4 @@
         </div>
     </section>
 </body>
-
 </html>
