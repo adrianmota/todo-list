@@ -13,8 +13,6 @@ header {
     width: 100%;
     background-color: #001d3d;
     border-radius: 10px;
-    position: relative;
-    top: -12px;
 }
 
 .text-right {
@@ -118,6 +116,30 @@ header {
     min-width: 200px;
 }
 
+[id="nav"] {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+[id="nav"] h1 {
+    margin-left: 20px;
+}
+
+.alert {
+    background-color: #d90429;
+    border-radius: 5px;
+    margin: 20px auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 550px;
+    max-width: 550px;
+}
+
 [id="todo-add-form-div"] {
     margin: 20px auto;
     display: flex;
@@ -140,7 +162,6 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
     min-width: 400px;
     width: 100%;
 }
@@ -151,7 +172,6 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
     min-width: 570px;
     width: 60%;
 }
@@ -159,7 +179,6 @@ header {
 [id="table"] {
     color: #eff6e0;
     border-collapse: collapse;
-    margin: 0 auto;
     min-width: 570px;
     width: 100%;
 }
@@ -168,6 +187,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: right;
+    margin-right: 10px;
 }
 
 [id="table"] th {
@@ -182,7 +202,7 @@ header {
 
 @media (max-width: 570px) {
     [id="todo-add-form"] { 
-        font-size: 20px;
+        font-size: 17px;
         flex-direction: column;
         width: 100%;
     }
@@ -190,16 +210,24 @@ header {
     .btn-primary {
         width: 90%;
         height: 35px;
+        font-size: 14px;
     }
 
     .btn-primary:hover {
         width: 90%;
         height: 35px;
+        font-size: 14px;
     }
 
     .btn-primary:active {
         width: 90%;
         height: 35px;
+        font-size: 14px;
+     }
+    
+    .alert {
+        min-width: 0;
+        width: 90%;    
     }
 
     [id="title"] {
@@ -239,5 +267,11 @@ header {
     [id="table"] {
         min-width: 0px;
         width: 100%;
+    }
+
+    [id="nav"] {
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
     }
 }
