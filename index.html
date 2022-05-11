@@ -8,27 +8,46 @@
     <link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
+        <!--modal-->
+        <div id="modal-div" class="center">
+            <div id="modal">
+                <div id="modal-exit">
+                    <button type="button"><img src="./images/close-icon.png" alt="Close-btn icon" width="15px"/></button>
+                </div>
+                <div id="modal-alert"></div>
+                <form id="modal-form">
+                    <label for="modal-title" style="margin-left: 10px;">Title</label>
+                    <input id="modal-title" type="text" placeholder="Learn To Code"/>
+                    <label for="modal-description" style="margin-left: 10px;">Description</label>
+                    <textarea id="modal-description" name="modal-description" rows="3" cols="50"></textarea>
+                    <div id="modal-buttons">
+                        <button id="modal-cancel" type="button">Cancel</button>
+                        <button id="modal-save" type="button">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     <header>
         <nav id="nav">
             <h1>Todo List</h1>
             <div id="search-form-div">
                 <form id="search-form">
                     <input id="search-input" type="search" placeholder="Pattern" class="ma-5 box-height"/>
-	   <button id="search" type="submit" class="ma-5 btn-primary">Search</button>
+                    <button id="search" type="submit" class="ma-5 btn-primary">Search</button>
                 </form>
             </div>
         </nav>
     </header>
-    <!--Part to add a task-->
     <section>
+        <!--Part to add a task-->
         <div id="alert"></div>
         <div id="todo-add-form-div">
             <form id="todo-add-form">
                 <label for="title" class="ma-5">Title</label>
-                <input id="title" type="text" placeholder="Learn Math" class="ma-5 box-height" />
+                <input id="title" type="text" placeholder="Learn To Code" class="ma-5 box-height" />
                 <label for="description" class="ma-5">Description</label>
-                <input id="description" type="text" placeholder="Watch videos about Math" class="ma-5 box-height box-width"/>
-                <button id="add-btn" type="button" class="ma-5 btn-primary">Add</button>
+                <input id="description" type="text" placeholder="Code a todo-list" class="ma-5 box-height box-width"/>
+                <button id="add" type="button" class="ma-5 btn-primary">Add</button>
             </form>
         </div>
         <hr />

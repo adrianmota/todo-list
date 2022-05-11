@@ -8,8 +8,13 @@ h1 {
     color: #eff6e0;
 }
 
+section hr {
+    min-width: 395px;
+}
+
 header {
     margin: 0 auto;
+    min-width: 395px;
     width: 100%;
     background-color: #001d3d;
     border-radius: 10px;
@@ -18,6 +23,7 @@ header {
 .text-right {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 
 .ma-5 {
@@ -116,6 +122,62 @@ header {
     min-width: 200px;
 }
 
+.center {
+    position: fixed;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+[id="modal"] {
+    background-color: #001d3d;
+    margin: auto;
+    border-radius: 10px;
+    padding: 30px;
+    position: relative;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 300px;
+    width: 30%;
+    height: 55%;
+}
+
+[id="modal-exit"] {
+    margin: 0px 10px 0px 10px;
+    display: flex;
+    justify-content: right;
+}
+
+[id="modal-form"] {
+    margin: 10px 0px 10px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+[id="modal-title"] {
+    margin: 10px 10px 10px 10px;
+    font-size: 13px;
+    height: 30px;
+}
+
+[id="modal-description"] {
+    resize: none;
+    margin: 10px 10px 10px 10px;
+    font-size: 15px;
+    height: 90px;
+}
+
+[id="modal-buttons"] {
+    margin: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
 [id="nav"] {
     display: flex;
     flex-direction: row;
@@ -137,15 +199,28 @@ header {
     justify-content: center;
     align-items: center;
     min-width: 550px;
-    max-width: 550px;
+    width: 57%;
 }
 
-[id="todo-add-form-div"] {
+.modal-alert {
+    background-color: #d90429;
+    border-radius: 5px;
+    margin: 15px auto;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 92%;
+}
+
+[id="todo-add-form"] {
     margin: 20px auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    min-width: 395px;
     width: 100%;
 }
 
@@ -179,7 +254,7 @@ header {
 [id="table"] {
     color: #eff6e0;
     border-collapse: collapse;
-    min-width: 570px;
+    min-width: 0px;
     width: 100%;
 }
 
@@ -209,33 +284,94 @@ header {
 
     .btn-primary {
         width: 90%;
-        height: 35px;
-        font-size: 14px;
+        height: 38px;
+        font-size: 18px;
     }
 
     .btn-primary:hover {
         width: 90%;
-        height: 35px;
-        font-size: 14px;
+        height: 38px;
+        font-size: 18px;
     }
 
     .btn-primary:active {
         width: 90%;
-        height: 35px;
-        font-size: 14px;
+        height: 38px;
+        font-size: 18px;
      }
-    
+
+    .btn-secondary {
+        margin-right: 10px;
+        border: 1px solid black;
+        border-radius: 4px;
+        width: 60px;
+        height: 30px;
+        background-color: #ffc300;
+        color: #000814;
+    }
+
+    .btn-secondary:hover {
+        border: 0;
+        border-radius: 4px;
+        width: 60px;
+        height: 30px;
+        background-color: #ee9b00;
+        color: #000814;
+    }
+
+    .btn-secondary:active {
+        border: 0;
+        border-radius: 4px;
+        width: 60px;
+        height: 30px;
+        background-color: #ffc300;
+        color: #000814;
+    }
+
+    .btn-danger {
+        border: 1px solid black;
+        border-radius: 4px;
+        width: 60px;
+        height: 30px;
+        background-color: #d90429;
+        color: #eff6e0;
+    }
+
+    .btn-danger:hover {
+        border: 0;
+        border-radius: 4px;
+        width: 60px;
+        height: 30px;
+        background-color: #780000;
+        color: #eff6e0;
+    }
+
+    .btn-danger:active {
+        border: 0;
+        border-radius: 4px;
+        width: 60px;
+        height: 30px;
+        background-color: #d90429;
+        color: #eff6e0;
+    }
+
     .alert {
         min-width: 0;
+        font-size: 18px;
         width: 90%;    
     }
 
     [id="title"] {
+        font-size: 18px;
+        height: 38px;
         width: 90%;
     }
 
     [id="description"] {
+        font-size: 18px;
+        height: 38px;
         width: 90%;
+        margin-bottom: 10px;
     }
     
     [id="search-form"] {
@@ -243,19 +379,30 @@ header {
         width: 100%;
     }
 
+    h1 {
+        font-size: 30px;
+    }
+
     [id="search"] {
         align-self: center;
+        font-size: 18px;
+        height: 38px;
         width: 90%;
         margin-bottom: 10px;
     }
 
     [id="search"]:hover {
         align-self: center;
+        font-size: 18px;
+        height: 38px;
         width: 90%;
     }
 
     [id="search-input"] {
         align-self: center;
+        font-size: 18px;
+        height: 38px;
+        min-width: 90%;
         width: 90%;
     }
 
@@ -265,7 +412,7 @@ header {
     }
 
     [id="table"] {
-        min-width: 0px;
+        font-size: 18px;
         width: 100%;
     }
 

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const addBtn = document.getElementById('add-btn');
+    const btn = document.getElementById('add');
     const table = document.getElementById('table');
     const title = document.getElementById('title');
     const description = document.getElementById('description');
@@ -34,9 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
         removeBtn.classList.add('btn-danger');
         removeBtn.innerText = 'Delete';
         row.children[2].appendChild(removeBtn);
-        removeBtn.onclick = (e) => console.log(e.target.parentElement.parentElement.id);
+        //removeBtn.onclick = (e) => console.log(e.target.parentElement.parentElement.id);
         //removeBtn.onclick = () => removeTodo(row.getAttribute('id'));
     };
 
-    addBtn.onclick = addTodo;
+    btn.onclick = addTodo;
 });
