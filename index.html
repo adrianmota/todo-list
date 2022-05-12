@@ -8,25 +8,6 @@
     <link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
-        <!--modal-->
-        <div id="modal-div" class="center">
-            <div id="modal">
-                <div id="modal-exit">
-                    <button type="button"><img src="./images/close-icon.png" alt="Close-btn icon" width="15px"/></button>
-                </div>
-                <div id="modal-alert"></div>
-                <form id="modal-form">
-                    <label for="modal-title" style="margin-left: 10px;">Title</label>
-                    <input id="modal-title" type="text" placeholder="Learn To Code"/>
-                    <label for="modal-description" style="margin-left: 10px;">Description</label>
-                    <textarea id="modal-description" name="modal-description" rows="3" cols="50"></textarea>
-                    <div id="modal-buttons">
-                        <button id="modal-cancel" type="button">Cancel</button>
-                        <button id="modal-save" type="button">Save</button>
-                    </div>
-                </form>
-            </div>
-        </div>
     <header>
         <nav id="nav">
             <h1>Todo List</h1>
@@ -39,8 +20,28 @@
         </nav>
     </header>
     <section>
+        <!--modal-->
+        <div id="modal" class="modal">
+            <div id="modal-content" class="modal-content">
+                <div id="modal-exit">
+                    <button type="button"><img src="./images/close-icon.png" alt="Close-btn icon" width="15px"/></button>
+                </div>
+                <div id="modal-alert" class="modal-alert d-none"></div>
+                <form id="modal-form">
+                    <label for="modal-title" style="margin-left: 10px;">Title</label>
+                    <input id="modal-title" type="text" placeholder="Learn To Code"/>
+                    <label for="modal-description" style="margin-left: 10px;">Description</label>
+                    <textarea id="modal-description" name="modal-description" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" rows="3" cols="50"></textarea>
+                    <div id="modal-buttons">
+                        <button id="modal-cancel" class="btn-secondary" style="background-color: grey; color: white;" type="button">Cancel</button>
+                        <button id="modal-save" class="btn-primary" type="button">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
         <!--Part to add a task-->
-        <div id="alert"></div>
+        <div id="alert" class="alert d-none"></div>
         <div id="todo-add-form-div">
             <form id="todo-add-form">
                 <label for="title" class="ma-5">Title</label>
@@ -59,23 +60,16 @@
                         <tr>
                             <th scope="col">Title</th>
                             <th scope="col">Description</th>
-	            <th scope="col"></th>
+	                        <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Study physics</td>
-                            <td>The topic to study is about the motion</td>
-                            <td class="text-right">
-                                <button id="edit-btn" type="button" class="btn-secondary">Edit</button>
-                                <button id="remove-btn" type="button" class="btn-danger">Delete</button>
-                            </td>
-                        </tr>
+                        <!-- Content generated with JS -->
                     </tbody>
                 </table>
             </div>
         </div>
     </section>
-    <script src="./scripts/index.js"></script>
+    <script src="./js/index.js" type="module"></script>
 </body>
 </html>
