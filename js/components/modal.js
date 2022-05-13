@@ -37,14 +37,14 @@ export default class Modal {
         this.modalContent.style.boxShadow = '0px 0px 0px 1200px rgba(0,0,0,0.5),0 6px 20px 0 rgba(0,0,0,0.19)';
         this.modal.style.display = 'block';
         this.modal.style.top = '0';
-        this.cancel.onclick = () => this.hide();
+        this.modalContent.onclick = () => this.modalContent.style.display = 'flex';
         this.modalExit.onclick = () => this.hide();
+        this.cancel.onclick = () => this.hide();
         window.onclick = (event) => {
             if (event.target == modal) {
                 this.hide();
             };
         };
-        this.modalContent.onclick = () => this.modalContent.style.display = 'flex';
     }
 
     hide() {
@@ -52,5 +52,6 @@ export default class Modal {
         this.modal.style.top = '-710px';
         this.modalContent.style.animationName = 'reduce-shadow';
         this.modalContent.style.boxShadow = '0px 0px 0px 1200px rgba(0,0,0,0),0 6px 20px 0 rgba(0,0,0,0.19)';
+        this.alert.hide();
     }
 }
